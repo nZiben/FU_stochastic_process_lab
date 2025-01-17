@@ -26,29 +26,9 @@
 ```
 .
 ├── charts
-│   ├── task1_histogram.png
-│   ├── task1_random_walk_trajectories.png
-│   ├── task1_moments_error.png
-│   ├── task2_trajectories.png
-│   ├── task3_stationary_distribution_comparison.png
-│   ├── task3_queue_dynamics.png
-│   ├── task4_poisson_distribution_comparison.png
-│   ├── task4_MSE_comparison.png
-│   ├── task5_random_walk_trajectories.png
-│   ├── task5_tau_distribution.png
-│   ├── task5_mu_distribution.png
-│   ├── task5_Mn_distribution.png
-│   ├── task6_wiener_trajectories.png
-│   ├── task6_wiener_with_bounds.png
-│   ├── task6_Mt_distribution.png
-│   └── task6_Wt_distribution.png
+│   └── ... (все графики)
 ├── src
-│   ├── task1.py
-│   ├── task2.py
-│   ├── task3.py
-│   ├── task4.py
-│   ├── task5.py
-│   └── task6.py
+│   └── ... (все файлы с кодом)
 ├── all_tasks.ipynb - весь код из src
 ├── README.md
 └── Report.pdf  <!-- Основной отчёт в PDF формате -->
@@ -64,14 +44,20 @@
 
 1. **Генерация выборки и визуализация**:
    - Сгенерирована выборка из 5000 случайных величин \(X\) с заданным функцией распределения (см. [task1.py](./src/task1.py)).
-   - Построена гистограмма выборки для наглядного сравнения с теоретической функцией плотности (рис. `task1_histogram.png`).
+   - Построена гистограмма выборки для наглядного сравнения с теоретической функцией плотности:
+
+     ![Гистограмма выборки](./charts/task1_histogram.png)
 
 2. **Симметричное случайное блуждание**:
-   - Сгенерированы 3 траектории симметричного случайного блуждания по 100 шагов каждая (рис. `task1_random_walk_trajectories.png`).
+   - Сгенерированы 3 траектории симметричного случайного блуждания по 100 шагов каждая:
+
+     ![Траектории случайного блуждания](./charts/task1_random_walk_trajectories.png)
 
 3. **Анализ моментов**:
    - Вычислены выборочные среднее и дисперсия, сравнение с теоретическими значениями \(E(X) \approx 0.6458\) и \(D(X) \approx 0.0516\).
-   - Построены графики относительной погрешности для различных размеров выборок (рис. `task1_moments_error.png`).
+   - Построены графики относительной погрешности для различных размеров выборок:
+
+     ![Погрешности моментов](./charts/task1_moments_error.png)
 
 4. **Тест \(\chi^2\)**:
    - Проведена проверка согласия эмпирического распределения с теоретическим с помощью критерия \(\chi^2\).
@@ -89,8 +75,10 @@
    - Задана матрица переходов \(P\) и начальное распределение \(p_0\) (см. [task2.py](./src/task2.py)).
    
 2. **Симуляция траекторий**:
-   - Сгенерированы 3 траектории длины 50 шагов каждая (рис. `task2_trajectories.png`).
-   
+   - Сгенерированы 3 траектории длины 50 шагов каждая:
+
+     ![Траектории Марковской цепи](./charts/task2_trajectories.png)
+
 3. **Распределение на шаге \(k=29\)**:
    - Вычислено распределение состояний на шаге \(k=29\), результаты представлены в отчёте.
    
@@ -163,12 +151,17 @@
      \[
      \text{Теоретическая}: 3.000000 \\
      \text{Эмпирическая}: -518.938045 \\
-     \text{Погрешность}: 17397.93\%
+     \text{Погрешность}: 17397.93\%\
      \]
 
 6. **Графики**:
-   - **Сравнение стационарных распределений**: `task3_stationary_distribution_comparison.png`
-   - **Динамика длины очереди во времени**: `task3_queue_dynamics.png`
+   - **Сравнение стационарных распределений**: 
+
+     ![Сравнение стационарных распределений](./charts/task3_stationary_distribution_comparison.png)
+
+   - **Динамика длины очереди во времени**: 
+
+     ![Динамика длины очереди](./charts/task3_queue_dynamics.png)
 
 **Вывод**:
 - Эмпирические результаты существенно отличаются от теоретических ожиданий.
@@ -194,8 +187,13 @@
    - Построены оценки \(N_t^\_\) и \(N_t^\circ\) с вычислением среднеквадратичных отклонений (MSE).
 
 4. **Графики**:
-   - **Сравнение эмпирического и теоретического распределений Пуассона**: `task4_poisson_distribution_comparison.png`
-   - **Сравнение MSE оценок**: `task4_MSE_comparison.png`
+   - **Сравнение эмпирического и теоретического распределений Пуассона**: 
+
+     ![Распределение Пуассона](./charts/task4_poisson_distribution_comparison.png)
+
+   - **Сравнение MSE оценок**: 
+
+     ![Сравнение MSE оценок](./charts/task4_MSE_comparison.png)
 
 **Вывод**:
 - Число событий в процессе Пуассона смоделировано корректно, близко к ожидаемому.
@@ -231,9 +229,17 @@
    - Для \(M_n / \sqrt{n}\) p-value = 0.0000 < 0.05, гипотеза о соответствии нормальному распределению **отвергается**.
 
 4. **Графики распределений**:
-   - **Распределение \(\tau\)**: `task5_tau_distribution.png`
-   - **Распределение \(\mu\)**: `task5_mu_distribution.png`
-   - **Распределение \(M_n / \sqrt{n}\)**: `task5_Mn_distribution.png`
+   - **Распределение \(\tau\)**:
+
+     ![Распределение \(\tau\)](./charts/task5_tau_distribution.png)
+
+   - **Распределение \(\mu\)**:
+
+     ![Распределение \(\mu\)](./charts/task5_mu_distribution.png)
+
+   - **Распределение \(M_n / \sqrt{n}\)**:
+
+     ![Распределение \(M_n / \sqrt{n}\)](./charts/task5_Mn_distribution.png)
 
 **Вывод**:
 - Эмпирические распределения \(\tau\) и \(\mu\) соответствуют теоретическому арксинусному распределению.
@@ -266,14 +272,24 @@
    - Для \(W_t / \sqrt{T}\) p-value = 0.6730 > 0.05, гипотеза о соответствии нормальному распределению **не отвергается**.
 
 4. **Графики распределений**:
-   - **Распределение \(M_t / \sqrt{T}\)**: `task6_Mt_distribution.png`
-   - **Распределение \(W_t / \sqrt{T}\)**: `task6_Wt_distribution.png`
+   - **Распределение \(M_t / \sqrt{T}\)**:
+
+     ![Распределение \(M_t / \sqrt{T}\)](./charts/task6_Mt_distribution.png)
+
+   - **Распределение \(W_t / \sqrt{T}\)**:
+
+     ![Распределение \(W_t / \sqrt{T}\)](./charts/task6_Wt_distribution.png)
 
 5. **Графики траекторий и границ**:
-   - **Несколько траекторий процесса**: `task6_wiener_trajectories.png`
-   - **Траектории с границами \(y = \pm(1 \pm \epsilon)\sqrt{2t \ln \ln t}\)**: `task6_wiener_with_bounds.png`
+   - **Несколько траекторий процесса**:
 
-**Вывод**:
+     ![Траектории процесса](./charts/task6_wiener_trajectories.png)
+
+   - **Траектории с границами \(y = \pm(1 \pm \epsilon)\sqrt{2t \ln \ln t}\)**:
+
+     ![Траектории с границами](./charts/task6_wiener_with_bounds.png)
+
+**Вывод**
 - Эмпирическое распределение конечных значений винеровского процесса \(W_t / \sqrt{T}\) соответствует нормальному распределению.
 - Распределение супремума \(M_t / \sqrt{T}\) не соответствует половинному нормальному распределению.
 - Графики подтверждают эти результаты, показывая соответствие и несоответствие распределений.
@@ -311,22 +327,4 @@
   - [task4.py](./src/task4.py)
   - [task5.py](./src/task5.py)
   - [task6.py](./src/task6.py)
-  
-- **Графики**:
-  - `task1_histogram.png`
-  - `task1_random_walk_trajectories.png`
-  - `task1_moments_error.png`
-  - `task2_trajectories.png`
-  - `task3_stationary_distribution_comparison.png`
-  - `task3_queue_dynamics.png`
-  - `task4_poisson_distribution_comparison.png`
-  - `task4_MSE_comparison.png`
-  - `task5_random_walk_trajectories.png`
-  - `task5_tau_distribution.png`
-  - `task5_mu_distribution.png`
-  - `task5_Mn_distribution.png`
-  - `task6_wiener_trajectories.png`
-  - `task6_wiener_with_bounds.png`
-  - `task6_Mt_distribution.png`
-  - `task6_Wt_distribution.png`
 
