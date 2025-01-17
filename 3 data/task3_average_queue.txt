@@ -1,0 +1,3 @@
+Theoretical Average Queue: 3.000000
+Empirical Average Queue: -518.938045
+Relative Error (%): 17397.93
